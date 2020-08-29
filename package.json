@@ -1,15 +1,15 @@
 {
-  "name": "busyjs",
-  "version": "1.0.2",
-  "description": "A lightweight JavaScript library for Busy",
+  "name": "buzzjs",
+  "version": "1.0.0",
+  "description": "A lightweight JavaScript library for Buzz",
   "repository": {
-    "url": "git://github.com/busyorg/busyjs.git",
+    "url": "git://github.com/ericet/buzzjs.git",
     "type": "git"
   },
   "license": "MIT",
-  "main": "dist/busy.cjs.js",
-  "module": "dist/busy.es.js",
-  "browser": "dist/busy.umd.js",
+  "main": "dist/buzz.cjs.js",
+  "module": "dist/buzz.es.js",
+  "browser": "dist/buzz.umd.js",
   "files": ["dist"],
   "scripts": {
     "build": "rollup -c",

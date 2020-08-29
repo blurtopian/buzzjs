@@ -1,40 +1,40 @@
-# Busy.js
+# Buzz.js
 
-A lightweight JavaScript library for Busy
+A lightweight JavaScript library for Buzz
 
 ### Install
 ```
-npm install busyjs --save
+npm install buzzjs --save
 ```
 
 ### Usage
 ```js
-var busy = require('busyjs');
+var buzz = require('buzz');
 
 // Init WebSocket client
-var client = new busy.Client('wss://gtg.steem.house:8090');
+var client = new buzz.Client('wss://notifications.blurt.world');
 
 // Get accounts
-client.call('get_accounts', ['fabien'], function(err, result) {
+client.call('get_notifications', ['ericet'], function(err, result) {
   console.log(err, result);
 });
 ```
 
 ### Promises
 
-You can also use Busy.js with promises by promisifying busy with
+You can also use Buzz.js with promises by promisifying buzz with
 [bluebird](https://github.com/petkaantonov/bluebird) as in:
 
 ```js
-var busy = require('busyjs');
-bluebird.promisifyAll(busy.Client.prototype);
+var buzz = require('buzzjs');
+bluebird.promisifyAll(buzz.Client.prototype);
 ```
 
-It'll add a *Async* to all busy functions (e.g. return client.callAsync().then())
+It'll add a *Async* to all buzz functions (e.g. return client.callAsync().then())
 
 ```js
-// So instead of writing client.request('get_accounts', ['fabien'], cb); you have to write:
-return client.callAsync('get_accounts', ['fabien']).then(function(result) {
+// So instead of writing client.request('get_notifications', ['ericet'], cb); you have to write:
+return client.callAsync('get_notifications', ['ericet']).then(function(result) {
   console.log(result); // => [{ id: 26921, name: 'fabien' ...]
 });
 ```

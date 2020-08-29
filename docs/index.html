@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Busy.js</title>
-  <script src="../dist/busy.min.js"></script>
+  <title>Buzz.js</title>
+  <script src="../dist/buzz.min.js"></script>
 </head>
 <body>
 
 <script>
   // Init WebSocket client
-  var client = new busy.Client('wss://gtg.steem.house:8090');
+  var client = new buzz.Client('wss://notifications.blurt.world');
 
   // Get accounts
-  client.call('get_accounts', ['fabien'], function(err, result) {
+  client.call('get_notifications', ['ericet'], function(err, result) {
     console.log(err, result);
   });
 </script>
